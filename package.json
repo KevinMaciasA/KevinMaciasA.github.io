@@ -1,0 +1,31 @@
+{
+  "name": "my-website",
+  "version": "0.0.0",
+  "description": "Everything needed to make my website work",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite --open",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinMaciasA/my-website.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "Website"
+  ],
+  "author": "Kevin Macias <kevin.macias.a@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KevinMaciasA/my-website/issues"
+  },
+  "homepage": "https://github.com/KevinMaciasA/my-website#readme",
+  "dependencies": {
+    "vite": "^4.5.0"
+  }
+}
