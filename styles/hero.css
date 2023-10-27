@@ -1,0 +1,109 @@
+.hero {
+  height: 90vh;
+}
+
+.hero--circle {
+  margin-inline-start: 6.7vw;
+  margin-block-start: 4.23vh;
+  margin-block-end: 2vh;
+}
+
+.hero--introduction {
+  display: grid;
+  justify-items: center;
+}
+
+.introduction--name {
+  padding: 4px;
+}
+
+.hero h1 {
+  text-align: center;
+}
+
+.hero h1 strong {
+  display: inline-block;
+  padding: 4px;
+  background-color: var(--black);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.introduction--role {
+  box-sizing: content-box;
+  height: fit-content;
+  width: fit-content;
+  margin-block-start: 3.52vh;
+  padding-block-start: 14px;
+  border: 1px solid black;
+  box-shadow: var(--v-shadow);
+}
+
+.introduction--role h2 {
+  text-align: center;
+  font-weight: normal;
+  padding: 0 12px;
+}
+
+.gradient-rectangle {
+  height: 10px;
+  background: linear-gradient(90deg, var(--pink) 0%, var(--sage-green) 100%);
+}
+
+.hero--line {
+  height: 1px;
+  width: 180px;
+  margin: 0 auto;
+  margin-block-start: 12.35vh;
+  background-color: var(--black);
+}
+
+.hero .cta {
+  margin-block-start: 10.73vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  margin-block-end: 6vh;
+}
+
+.hero--box {
+  display: none;
+}
+
+.box {
+  display: grid;
+  display: none;
+  place-content: center;
+
+  width: 42px;
+  height: 42px;
+  border: 1px solid black;
+  outline: 1px solid black;
+  box-shadow: var(--box-shadow);
+}
+
+.box__github {
+  position: absolute;
+  inset-block-end: 1vh;
+  inset-inline-start: 26vw;
+}
+
+.box__linkedin {
+  position: absolute;
+  inset-block-end: 2.6vh;
+  inset-inline-end: 16.2vw;
+
+  transform: rotate(48deg);
+}
+
+.box__profile {
+  position: absolute;
+  inset-block-end: 1.3vh;
+  inset-inline-end: 1vw;
+
+  transform: rotate(4deg);
+}

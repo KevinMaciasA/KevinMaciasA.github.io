@@ -7,11 +7,222 @@
       content="Hello! My name is Kevin Macias and this es my personal website"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/hero.css" />
+    <link rel="stylesheet" href="/styles/info.css" />
     <title>My website</title>
   </head>
   <body>
-    <h1>Testing Vite</h1>
+    <section class="hero">
+      <svg
+        class="hero--circle"
+        xmlns="http://www.w3.org/2000/svg"
+        width="36"
+        height="36"
+        viewBox="0 0 36 36"
+        fill="none"
+      >
+        <circle cx="18" cy="18" r="18" fill="black" />
+      </svg>
+      <div class="hero--introduction">
+        <div class="introduction--name">
+          <h1>Hello! My name is <strong>Kevin</strong></h1>
+        </div>
+        <div class="introduction--role">
+          <h2>Frontend Developer</h2>
+          <div class="gradient-rectangle"></div>
+        </div>
+      </div>
+      <div class="hero--line"></div>
+      <div class="cta">
+        <button class="button primary-button" type="button">Resume</button>
+        <button class="button secondary-button" type="button">
+          Contact me
+        </button>
+      </div>
+      <div class="box box__github">
+        <svg
+          width="32"
+          height="31"
+          viewBox="0 0 32 31"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M16 0.250001C7.29925 0.250001 0.25 7.2925 0.25 15.9843C0.25 22.9368 4.7635 28.8318 11.0208 30.913C11.8083 31.057 12.0962 30.571 12.0962 30.1548C12.0962 29.7813 12.0828 28.7913 12.0738 27.4773C7.693 28.429 6.7705 25.369 6.7705 25.369C6.05275 23.551 5.02 23.0673 5.02 23.0673C3.59125 22.0908 5.128 22.111 5.128 22.111C6.70975 22.2235 7.54225 23.731 7.54225 23.731C8.94625 26.1385 11.2277 25.441 12.1255 25.0405C12.2672 24.0235 12.6745 23.3305 13.1245 22.9368C9.628 22.5408 5.9515 21.1908 5.9515 15.1608C5.9515 13.444 6.56575 12.0378 7.5715 10.9398C7.4095 10.5415 6.8695 8.94175 7.729 6.77725C7.729 6.77725 9.0475 6.352 12.058 8.38825C13.3428 8.0382 14.6683 7.85965 16 7.85725C17.3388 7.864 18.6865 8.03725 19.9443 8.38825C22.9503 6.352 24.271 6.775 24.271 6.775C25.1305 8.94175 24.5905 10.5415 24.4285 10.9375C25.4365 12.04 26.0485 13.444 26.0485 15.1608C26.0485 21.2043 22.363 22.5363 18.8553 22.9233C19.42 23.4093 19.924 24.37 19.924 25.8393C19.924 27.9408 19.9037 29.6373 19.9037 30.1548C19.9037 30.5755 20.1895 31.0638 20.9883 30.9108C24.1211 29.8661 26.8461 27.8626 28.7774 25.1838C30.7088 22.5051 31.7487 19.2867 31.75 15.9843C31.7476 11.8093 30.087 7.8062 27.1333 4.85552C24.1797 1.90484 20.175 0.248211 16 0.250001Z"
+            fill="black"
+          />
+        </svg>
+      </div>
+      <div class="box box__linkedin">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"
+          />
+        </svg>
+      </div>
+      <div class="box box__profile">
+        <svg
+          width="38"
+          height="38"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_15_82)">
+            <rect width="24" height="24" fill="white" />
+            <g filter="url(#filter0_d_15_82)">
+              <path
+                d="M14.3365 12.3466L14.0765 11.9195C13.9082 12.022 13.8158 12.2137 13.8405 12.4092C13.8651 12.6046 14.0022 12.7674 14.1907 12.8249L14.3365 12.3466ZM9.6634 12.3466L9.80923 12.8249C9.99769 12.7674 10.1348 12.6046 10.1595 12.4092C10.1841 12.2137 10.0917 12.022 9.92339 11.9195L9.6634 12.3466ZM4.06161 19.002L3.56544 18.9402L4.06161 19.002ZM19.9383 19.002L20.4345 18.9402L19.9383 19.002ZM16 8.5C16 9.94799 15.2309 11.2168 14.0765 11.9195L14.5965 12.7737C16.0365 11.8971 17 10.3113 17 8.5H16ZM12 4.5C14.2091 4.5 16 6.29086 16 8.5H17C17 5.73858 14.7614 3.5 12 3.5V4.5ZM7.99996 8.5C7.99996 6.29086 9.79082 4.5 12 4.5V3.5C9.23854 3.5 6.99996 5.73858 6.99996 8.5H7.99996ZM9.92339 11.9195C8.76904 11.2168 7.99996 9.948 7.99996 8.5H6.99996C6.99996 10.3113 7.96342 11.8971 9.40342 12.7737L9.92339 11.9195ZM9.51758 11.8683C6.36083 12.8309 3.98356 15.5804 3.56544 18.9402L4.55778 19.0637C4.92638 16.1018 7.02381 13.6742 9.80923 12.8249L9.51758 11.8683ZM3.56544 18.9402C3.45493 19.8282 4.19055 20.5 4.99996 20.5V19.5C4.70481 19.5 4.53188 19.2719 4.55778 19.0637L3.56544 18.9402ZM4.99996 20.5H19V19.5H4.99996V20.5ZM19 20.5C19.8094 20.5 20.545 19.8282 20.4345 18.9402L19.4421 19.0637C19.468 19.2719 19.2951 19.5 19 19.5V20.5ZM20.4345 18.9402C20.0164 15.5804 17.6391 12.8309 14.4823 11.8683L14.1907 12.8249C16.9761 13.6742 19.0735 16.1018 19.4421 19.0637L20.4345 18.9402Z"
+                fill="#000000"
+              />
+            </g>
+          </g>
+          <defs>
+            <filter
+              id="filter0_d_15_82"
+              x="2.55444"
+              y="3.5"
+              width="18.8911"
+              height="19"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="1" />
+              <feGaussianBlur stdDeviation="0.5" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_15_82"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_15_82"
+                result="shape"
+              />
+            </filter>
+            <clipPath id="clip0_15_82">
+              <rect width="24" height="24" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+    </section>
+    <section class="header">
+      <div class="header--left logo">
+        <p class="logo--name">Kevin.</p>
+        <div class="logo--line"></div>
+      </div>
+      <div class="header--right">
+        <a class="desktop links" href="">about me</a>
+        <a class="desktop links" href="">portfolio</a>
+        <a class="desktop links" href="">contact me</a>
+        <button class="desktop" type="button">slider</button>
+        <button class="mobile mobile-button" type="button">
+          <div class="mobile-button__mode dark-button">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 21 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10 22.3065C16.0751 22.3065 21 17.3816 21 11.3065C21 5.23133 16.0751 0.306458 10 0.306458C7.59856 0.306458 5.37686 1.07599 3.56802 2.38192C7.20431 2.90031 10.0001 6.02689 10.0001 9.80646C10.0001 13.9486 6.6422 17.3065 2.50006 17.3065C1.85436 17.3065 1.22772 17.2249 0.629883 17.0714C2.56665 20.2127 6.03881 22.3065 10 22.3065Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </button>
+        <button
+          class="mobile test mobile-button mobile-button__hamburger purple-button"
+          type="button"
+        >
+          <svg
+            width="29"
+            height="3"
+            viewBox="0 0 29 3"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="1.5" x2="29" y2="1.5" stroke="black" stroke-width="2" />
+          </svg>
+          <svg
+            width="29"
+            height="3"
+            viewBox="0 0 29 3"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="1.5" x2="29" y2="1.5" stroke="black" stroke-width="2" />
+          </svg>
+          <svg
+            width="29"
+            height="3"
+            viewBox="0 0 29 3"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="1.5" x2="29" y2="1.5" stroke="black" stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+    </section>
+    <section class="info">
+      <div class="status-container">
+        <p class="status">
+          Currently looking for <strong>new challenges</strong>
+        </p>
+      </div>
+      <div class="info-container">
+        <div class="quote-container">
+          <div class="quote">
+            <p class="quote--text">
+              “FrontEnd is where art and functionality collides”
+            </p>
+          </div>
+          <div class="photo"></div>
+        </div>
+        <div class="experience">
+          <h2 class="title">Experience</h2>
+          <p>
+            Pivoting to frontEnd so no experience in the field but previously:
+          </p>
+          <h3>Jr. Software Engineer at JVI</h3>
+          <ul>
+            <li>1 year of experience in desktop applications.</li>
+          </ul>
+        </div>
+        <a class="button button__cv" href="/">Download CV</a>
+      </div>
+    </section>
   </body>
 </html>

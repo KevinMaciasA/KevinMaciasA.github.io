@@ -1,0 +1,145 @@
+/* mobile screen: 320px * 568px */
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+
+  /* Text variables */
+  --h1: 2.4rem;
+  --h2: 2.4rem;
+  --h3: 2rem;
+  --h4: 2rem;
+  --text: 1.6rem;
+  --text-up: 1.8rem;
+  --small-text: 1.4rem;
+
+  /* Colors variables */
+  --black: #000;
+  --white: #fff;
+  --orange: #ffa500;
+  --blush-pink: #ffe1df;
+  --pink: #ff91e8;
+  --sage-green: #b2ec5d;
+  --blush-purple: #dfccff;
+  --violet: #800080;
+  --navy-blue: #000080;
+
+  /* shadows */
+  --v-shadow: 0px 4px 0px 1px #000;
+  --r-shadow: 3px 4px 0px 1px #000;
+  --box-shadow: 0px 3px 0px 1px #000;
+}
+
+h1 {
+  font-size: var(--h1);
+  font-weight: normal;
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+.button {
+  box-sizing: content-box;
+  padding: 10px 12px;
+
+  font-size: var(--text);
+  font-weight: 500;
+  line-height: normal;
+
+  border: 2px solid #000;
+  border-radius: 4px;
+
+  box-shadow: var(--v-shadow);
+}
+
+.primary-button {
+  background-color: var(--pink);
+}
+
+.secondary-button {
+  background-color: var(--sage-green);
+}
+
+.purple-button {
+  background-color: var(--blush-purple);
+}
+
+.dark-button {
+  background-color: var(--black);
+  /* background-color: #41413b; */
+}
+
+.mobile-button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 3px;
+  border: 1px solid #000;
+
+  box-shadow: var(--v-shadow);
+}
+
+.mobile-button__hamburger {
+  display: grid;
+  place-content: center;
+  gap: 6px;
+}
+
+.mobile-button__mode {
+  display: grid;
+  place-content: center;
+  padding: 8px;
+  border-radius: 1px;
+}
+
+.mobile-button__mode svg {
+  padding-block-start: 0px;
+}
+
+.header {
+  height: 10vh;
+
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+
+  border: 2px solid black;
+  border-inline-start: 0;
+  border-inline-end: 0;
+
+  .logo {
+    font-size: var(--h2);
+    font-weight: 500;
+    line-height: normal;
+
+    .logo--line {
+      width: auto;
+      height: 1px;
+      background-color: var(--black);
+      box-shadow: 5px 4px 0px 0px var(--navy-blue);
+    }
+  }
+
+  .header--right {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.desktop {
+  display: none;
+}
