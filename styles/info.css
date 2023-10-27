@@ -1,0 +1,28 @@
+.info {
+  height: 100vh;
+  padding: 20px 16px 0;
+}
+
+.status-container {
+  display: grid;
+  place-content: center;
+
+  width: 230px;
+  padding: 4px 10px;
+  margin-block-end: 3.8vh;
+
+  background-color: var(--blush-pink);
+  border: 2px solid var(--black);
+  box-shadow: var(--r-shadow);
+}
+
+.status {
+  font-weight: 500;
+  font-size: var(--text-up);
+}
+
+.quote {
+  width: 200px;
+  height: 150px;
+  background: no-repeat url(".././assets/info/phrase-icon.svg");
+}
