@@ -1,0 +1,187 @@
+.find-me .banner {
+  background-color: var(--sage-green);
+  margin-block-end: 3.52vh;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.52vh;
+
+  margin-block-end: 3.52vh;
+}
+
+.social-card {
+  display: flex;
+  width: 320px;
+  padding: 8px 14px;
+  flex-direction: column;
+  gap: 10px;
+  line-height: normal;
+  border: 2px solid var(--black, #000);
+
+  box-shadow: var(--l-shadow);
+}
+
+.social-card--info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-card .picture-container {
+  display: grid;
+  place-content: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  box-shadow: var(--classic-shadow);
+}
+
+.social-card .contact--username {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.social-card .contact--status {
+  font-size: 1.6rem;
+  color: var(--gray, #808080);
+}
+
+.social-card--content {
+  font-size: 1.6rem;
+}
+
+.social-card .extra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tag-container {
+  display: flex;
+  gap: 6px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  padding: 2px 7px;
+  gap: 4px;
+
+  border-radius: 8px;
+  border: 1px solid var(--black);
+
+  .tag--content {
+    align-self: flex-start;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
+
+.bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.bullet__ts {
+  background-color: var(--ts-blue);
+}
+
+.bullet__react {
+  background-color: var(--react-blue);
+}
+
+.button__card {
+  display: flex;
+  align-items: center;
+  padding: 5px 7px;
+  gap: 6px;
+
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid #000;
+  background-color: var(--github-black, #24292f);
+  box-shadow: var(--sm-classic-shadow);
+
+  & p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--white);
+  }
+}
+
+.social-card__linkedin {
+  position: relative;
+
+  .arrow {
+    position: absolute;
+    inset-inline-end: 6px;
+    inset-block-end: 41px;
+  }
+
+  .picture-container {
+    background-color: var(--linkedin-blue);
+  }
+
+  .contact--user {
+    display: flex;
+    align-items: center;
+
+    .user--gen {
+      font-weight: normal;
+    }
+  }
+
+  .contact--data {
+    display: flex;
+    align-items: center;
+    color: var(--gray);
+  }
+
+  .extra {
+    justify-content: flex-end;
+  }
+
+  .button__card {
+    background-color: var(--linkedin-blue);
+  }
+}
+
+.social-card__x {
+  .picture-container {
+    background-color: var(--black);
+  }
+
+  .contact--name {
+    color: var(--gray, #808080);
+    font-size: 2rem;
+  }
+
+  .contact--user {
+    color: var(--black, #000);
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .extra--date {
+    align-self: flex-end;
+    color: var(--gray, #808080);
+    font-size: 1.4rem;
+  }
+
+  .button__card {
+    background-color: var(--black);
+  }
+}
+
+.w-spacer {
+  display: block;
+  font-size: 2rem;
+  margin: 0 4px;
+  font-weight: 500;
+}

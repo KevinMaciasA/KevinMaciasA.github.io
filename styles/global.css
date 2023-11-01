@@ -15,18 +15,28 @@
 
   /* Colors variables */
   --black: #000;
+  --github-black: #24292f;
+  --gray: #808080;
   --white: #fff;
   --orange: #ffa500;
+  --cream: #ffffcc;
   --blush-pink: #ffe1df;
   --pink: #ff91e8;
   --sage-green: #b2ec5d;
   --blush-purple: #dfccff;
   --violet: #800080;
   --navy-blue: #000080;
+  --ts-blue: #3178c6;
+  --linkedin-blue: #0a66c2;
+  --react-blue: #61dafb;
 
   /* shadows */
   --v-shadow: 0px 4px 0px 1px #000;
   --r-shadow: 3px 4px 0px 1px #000;
+  --l-shadow: -4px 5px 0px 1px #000;
+  --classic-shadow: 0px 3px 0px 1px rgba(0, 0, 0, 0.25);
+  --sm-classic-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.25);
+  --small-shadow: 0px 1px 0px 1px #000;
   --box-shadow: 0px 3px 0px 1px #000;
 }
 
@@ -45,6 +55,34 @@ h3 {
 
 h4 {
   font-size: var(--h4);
+}
+
+p {
+  font-size: var(--text-up);
+}
+
+ul {
+  margin: 0;
+  /* padding-inline-start: 2px; */
+}
+
+li {
+  font-size: var(--text-up);
+}
+
+.banner {
+  display: grid;
+  place-content: center;
+  height: 10vh;
+
+  border: 2px solid black;
+  border-inline-start: 0;
+  border-inline-end: 0;
+
+  & h2 {
+    text-align: center;
+    font-weight: 500;
+  }
 }
 
 .button {
@@ -108,6 +146,24 @@ h4 {
   padding-block-start: 0px;
 }
 
+.button__cv {
+  padding: 8px 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  text-decoration: none;
+  font-size: var(--text-up);
+  color: var(--black);
+  background-color: var(--orange);
+  line-height: normal;
+
+  border: 1px solid #000;
+  box-shadow: var(--small-shadow);
+}
+
+.button__cv:active {
+  background-color: var(--cream);
+}
+
 .header {
   height: 10vh;
 
@@ -138,6 +194,14 @@ h4 {
     display: flex;
     gap: 16px;
   }
+}
+
+.fw-400 {
+  font-weight: normal;
+}
+
+.fw-500 {
+  font-weight: 500;
 }
 
 .desktop {
