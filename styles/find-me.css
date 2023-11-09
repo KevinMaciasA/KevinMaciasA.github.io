@@ -1,5 +1,5 @@
 .find-me .banner {
-  background-color: var(--sage-green);
+  background-color: var(--secondary);
   margin-block-end: 3.52vh;
 }
 
@@ -19,7 +19,7 @@
   flex-direction: column;
   gap: 10px;
   line-height: normal;
-  border: 2px solid var(--black, #000);
+  border: 2px solid var(--frontground);
 
   box-shadow: var(--l-shadow);
 }
@@ -35,7 +35,7 @@
   place-content: center;
   width: 64px;
   height: 64px;
-  border: 1px solid var(--black);
+  border: 1px solid var(--frontground);
   border-radius: 50%;
   box-shadow: var(--classic-shadow);
 }
@@ -47,7 +47,7 @@
 
 .social-card .contact--status {
   font-size: 1.6rem;
-  color: var(--gray, #808080);
+  color: var(--middleground);
 }
 
 .social-card--content {
@@ -73,7 +73,7 @@
   gap: 4px;
 
   border-radius: 8px;
-  border: 1px solid var(--black);
+  border: 1px solid var(--frontground);
 
   .tag--content {
     align-self: flex-start;
@@ -104,7 +104,7 @@
 
   text-decoration: none;
   border-radius: 6px;
-  border: 1px solid #000;
+  border: 1px solid var(--frontground);
   background-color: var(--github-black, #24292f);
   box-shadow: var(--sm-classic-shadow);
 
@@ -114,6 +114,9 @@
     color: var(--white);
   }
 }
+.social-card__github .picture-container svg {
+  fill: var(--github-color);
+}
 
 .social-card__linkedin {
   position: relative;
@@ -122,6 +125,7 @@
     position: absolute;
     inset-inline-end: 6px;
     inset-block-end: 41px;
+    fill: var(--frontground);
   }
 
   .picture-container {
@@ -140,7 +144,7 @@
   .contact--data {
     display: flex;
     align-items: center;
-    color: var(--gray);
+    color: var(--middleground);
   }
 
   .extra {
@@ -154,28 +158,40 @@
 
 .social-card__x {
   .picture-container {
-    background-color: var(--black);
+    background-color: var(--frontground);
   }
 
   .contact--name {
-    color: var(--gray, #808080);
+    color: var(--middleground);
     font-size: 2rem;
   }
 
   .contact--user {
-    color: var(--black, #000);
+    color: var(--frontground);
     font-size: 2rem;
     font-weight: 500;
   }
 
   .extra--date {
     align-self: flex-end;
-    color: var(--gray, #808080);
+    color: var(--middleground);
     font-size: 1.4rem;
   }
 
+  .picture-container svg {
+    fill: var(--background);
+  }
+
   .button__card {
-    background-color: var(--black);
+    background-color: var(--frontground);
+
+    & p {
+      color: var(--background);
+    }
+
+    & svg {
+      fill: var(--background);
+    }
   }
 }
 

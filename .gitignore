@@ -28,6 +28,3 @@ dist-ssr
 *.jpg
 *.jpeg
 *.gif
-
-# Ignore SVG files
-*.svg

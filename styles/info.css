@@ -1,5 +1,4 @@
 .info {
-  height: 100vh;
   padding: 20px 16px 0;
 }
 
@@ -9,36 +8,80 @@
 
   width: 230px;
   padding: 4px 10px;
-  margin-block-end: 3.8vh;
+  margin-block-end: 20px;
 
-  background-color: var(--blush-pink);
-  border: 2px solid var(--black);
+  background-color: var(--surface1);
+  border: 2px solid var(--frontground);
   box-shadow: var(--r-shadow);
 }
 
 .status {
+  color: var(--black);
   font-weight: 500;
   font-size: var(--text-up);
 }
 
-.quote {
-  width: 200px;
-  height: 150px;
-  background: no-repeat url(".././assets/info/phrase-icon.svg");
+.bubble {
+  position: relative;
+  margin-block-end: 6px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.bubble--text {
+  position: relative;
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: var(--surface2);
+  border: 2px solid var(--frontground);
+  border-radius: 4px;
+  box-shadow: 9px 6px 0px 1px rgba(0, 0, 0, 0.16);
+}
+
+.bubble--triangle {
+  position: absolute;
+  inset-block-end: -27px;
+  inset-inline-start: 54vw;
+  fill: var(--surface2);
+}
+
+.quote-container .photo-container {
+  margin: 0 auto;
+  width: 100px;
 }
 
 .experience {
+  margin-block-start: -6px;
+  position: relative;
   display: flex;
   flex-direction: column;
+  padding: 18px 22px;
   gap: 8px;
 
+  background-color: var(--background);
+  border: 2px solid var(--frontground);
+
   margin-block-end: 16px;
+
+  z-index: -1;
 }
 
 .experience h3 {
   text-wrap: wrap;
 }
 
-.cv {
-  text-align: center;
+.experience .left-hand {
+  position: absolute;
+  inset-inline-start: -15px;
+  inset-block-end: 50px;
+}
+
+.experience .right-hand {
+  position: absolute;
+  inset-inline-end: -10px;
+  inset-block-end: 40px;
+}
+
+.hand {
+  fill: var(--frontground);
 }

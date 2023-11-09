@@ -24,8 +24,8 @@
 .hero h1 strong {
   display: inline-block;
   padding: 4px;
-  background-color: var(--black);
-  color: var(--white);
+  background-color: var(--frontground);
+  color: var(--background);
   font-weight: 500;
 }
 
@@ -35,7 +35,7 @@
   width: fit-content;
   margin-block-start: 3.52vh;
   padding-block-start: 14px;
-  border: 1px solid black;
+  border: 1px solid var(--frontground);
   box-shadow: var(--v-shadow);
 }
 
@@ -47,7 +47,7 @@
 
 .gradient-rectangle {
   height: 10px;
-  background: linear-gradient(90deg, var(--pink) 0%, var(--sage-green) 100%);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
 }
 
 .hero--line {
@@ -55,7 +55,7 @@
   width: 180px;
   margin: 0 auto;
   margin-block-start: 12.35vh;
-  background-color: var(--black);
+  background-color: var(--frontground);
 }
 
 .hero .cta {
@@ -70,6 +70,10 @@
   margin-block-end: 6vh;
 }
 
+.hero svg {
+  fill: var(--frontground);
+}
+
 .hero--box {
   display: none;
 }
@@ -81,8 +85,8 @@
 
   width: 42px;
   height: 42px;
-  border: 1px solid black;
-  outline: 1px solid black;
+  border: 1px solid var(--frontground);
+  outline: 1px solid var(--frontground);
   box-shadow: var(--box-shadow);
 }
 
@@ -100,7 +104,7 @@
   transform: rotate(48deg);
 }
 
-.box__profile {
+.box__user {
   position: absolute;
   inset-block-end: 1.3vh;
   inset-inline-end: 1vw;

@@ -11,12 +11,15 @@
   --h4: 2rem;
   --text: 1.6rem;
   --text-up: 1.8rem;
+  --title: 1.8rem;
   --small-text: 1.4rem;
 
   /* Colors variables */
   --black: #000;
+  --dark: #111;
   --github-black: #24292f;
-  --gray: #808080;
+  --gray: #757575;
+  --silver: #c0c0c0;
   --white: #fff;
   --orange: #ffa500;
   --cream: #ffffcc;
@@ -24,20 +27,80 @@
   --pink: #ff91e8;
   --sage-green: #b2ec5d;
   --blush-purple: #dfccff;
+  --d-gray: #a2a2a2;
+  --d-yellow: #ffd803;
+  --d-green: #2cb67d;
+  --d-blue: #7f5af0;
+  --d-violet: #9656a1;
   --violet: #800080;
   --navy-blue: #000080;
   --ts-blue: #3178c6;
   --linkedin-blue: #0a66c2;
   --react-blue: #61dafb;
 
+  --transparent-black: rgba(0, 0, 0, 0.25);
+  --transparent-white: rgba(255, 255, 255, 0.25);
+}
+
+:root[color-theme="light"] {
+  --background: var(--white);
+  --frontground: var(--black);
+  --middleground: var(--gray);
+  --primary: var(--pink);
+  --secondary: var(--sage-green);
+  --surface1: var(--blush-pink);
+  --surface2: var(--cream);
+  --surface3: var(--blush-purple);
+  --shadow1: var(--transparent-black);
+
+  --github-color: var(--github-black);
+
+  .light-hidden {
+    display: none;
+  }
+
+  .dark-hidden {
+    display: block;
+  }
+}
+
+:root[color-theme="dark"] {
+  --background: var(--dark);
+  --frontground: var(--white);
+  --middleground: var(--silver);
+  --primary: var(--d-yellow);
+  --secondary: var(--d-green);
+  --surface1: var(--d-yellow);
+  --surface2: var(--black);
+  --surface3: var(--blush-purple);
+  --shadow1: var(--transparent-white);
+
+  --github-color: var(--white);
+
+  .light-hidden {
+    display: block;
+  }
+
+  .dark-hidden {
+    display: none;
+  }
+}
+
+:root {
   /* shadows */
-  --v-shadow: 0px 4px 0px 1px #000;
-  --r-shadow: 3px 4px 0px 1px #000;
-  --l-shadow: -4px 5px 0px 1px #000;
-  --classic-shadow: 0px 3px 0px 1px rgba(0, 0, 0, 0.25);
-  --sm-classic-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.25);
-  --small-shadow: 0px 1px 0px 1px #000;
-  --box-shadow: 0px 3px 0px 1px #000;
+  --v-shadow: 0px 4px 0px 1px var(--frontground);
+  --r-shadow: 3px 4px 0px 1px var(--frontground);
+  --l-shadow: -4px 5px 0px 1px var(--frontground);
+  --classic-shadow: 0px 3px 0px 1px var(--shadow1);
+  --sm-classic-shadow: 0px 1px 0px 1px var(--shadow1);
+  --small-shadow: 0px 1px 0px 1px var(--frontground);
+  --box-shadow: 0px 3px 0px 1px var(--frontground);
+}
+
+body {
+  transition: background-color 0.5s ease;
+  background-color: var(--background);
+  color: var(--frontground);
 }
 
 h1 {
@@ -73,47 +136,52 @@ li {
 .banner {
   display: grid;
   place-content: center;
-  height: 10vh;
+  height: 54px;
 
-  border: 2px solid black;
+  border: 2px solid var(--frontground);
   border-inline-start: 0;
   border-inline-end: 0;
 
   & h2 {
     text-align: center;
     font-weight: 500;
+    color: black;
   }
 }
 
 .button {
-  box-sizing: content-box;
+  display: inline-block;
   padding: 10px 12px;
 
   font-size: var(--text);
   font-weight: 500;
   line-height: normal;
 
-  border: 2px solid #000;
+  border: 2px solid var(--frontground);
   border-radius: 4px;
 
   box-shadow: var(--v-shadow);
+  cursor: pointer;
 }
 
 .primary-button {
-  background-color: var(--pink);
+  background-color: var(--primary);
 }
 
 .secondary-button {
-  background-color: var(--sage-green);
+  background-color: var(--secondary);
 }
 
 .purple-button {
-  background-color: var(--blush-purple);
+  background-color: var(--surface3);
 }
 
-.dark-button {
-  background-color: var(--black);
-  /* background-color: #41413b; */
+.theme-button {
+  background-color: var(--frontground);
+}
+
+:root[color-theme="dark"] .theme-button {
+  padding: 4px;
 }
 
 .mobile-button {
@@ -123,16 +191,72 @@ li {
   justify-content: center;
   align-items: center;
 
+  background-color: var(--background);
   border-radius: 3px;
-  border: 1px solid #000;
+  border: 1px solid var(--frontground);
 
   box-shadow: var(--v-shadow);
 }
 
 .mobile-button__hamburger {
+  position: relative;
   display: grid;
   place-content: center;
   gap: 6px;
+
+  & line {
+    stroke: var(--frontground);
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    inset-block-start: 140%;
+    inset-inline-start: 50%;
+    transform: translate(-50%);
+
+    padding: 1px 2px 6px;
+
+    background-color: var(--surface2);
+    border: 2px solid var(--frontground);
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      padding: 0;
+      list-style: none;
+    }
+
+    .triangle {
+      position: absolute;
+      inset-inline-start: 50%;
+      transform: translateX(-50%);
+      inset-block-start: -14px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 14px solid;
+    }
+  }
+
+  &:focus .submenu {
+    display: block;
+  }
+}
+
+.submenu--button {
+  border-radius: 0;
+}
+
+.submenu--button__github {
+  background-color: var(--surface1);
+}
+
+.submenu--button__linkedin {
+  background-color: var(--secondary);
 }
 
 .mobile-button__mode {
@@ -147,13 +271,15 @@ li {
 }
 
 .button__cv {
+  width: 55%;
   padding: 8px 10px;
+  align-self: center;
   font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
   text-decoration: none;
   font-size: var(--text-up);
   color: var(--black);
-  background-color: var(--orange);
+  background-color: var(--secondary);
   line-height: normal;
 
   border: 1px solid #000;
@@ -161,21 +287,26 @@ li {
 }
 
 .button__cv:active {
-  background-color: var(--cream);
+  background-color: var(--surface3);
 }
 
 .header {
-  height: 10vh;
-
+  position: -webkit-sticky; /* Safari */
   position: sticky;
+  top: -1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 10vh;
   padding: 0 5vw;
 
-  border: 2px solid black;
+  background-color: var(--background);
+
+  border: 2px solid var(--frontground);
   border-inline-start: 0;
   border-inline-end: 0;
+
+  z-index: 10;
 
   .logo {
     font-size: var(--h2);
@@ -185,7 +316,7 @@ li {
     .logo--line {
       width: auto;
       height: 1px;
-      background-color: var(--black);
+      background-color: var(--frontground);
       box-shadow: 5px 4px 0px 0px var(--navy-blue);
     }
   }
@@ -202,6 +333,15 @@ li {
 
 .fw-500 {
   font-weight: 500;
+}
+
+.text {
+  font-size: var(--text);
+  text-wrap: pretty;
+}
+
+.title {
+  font-size: var(--title);
 }
 
 .desktop {
