@@ -22,12 +22,14 @@
   --silver: #c0c0c0;
   --white: #fff;
   --orange: #ffa500;
-  --cream: #ffffcc;
+  --cream: #ffffaf;
+  /* --cream: #ffffcc; */
   --blush-pink: #ffe1df;
   --pink: #ff91e8;
   --sage-green: #b2ec5d;
   --blush-purple: #dfccff;
-  --d-gray: #a2a2a2;
+  --d-white: #e6e6e6;
+  --d-gray: #a7a7a7;
   --d-yellow: #ffd803;
   --d-green: #2cb67d;
   --d-blue: #7f5af0;
@@ -38,8 +40,10 @@
   --linkedin-blue: #0a66c2;
   --react-blue: #61dafb;
 
-  --transparent-black: rgba(0, 0, 0, 0.25);
-  --transparent-white: rgba(255, 255, 255, 0.25);
+  --transparent-black1: rgba(0, 0, 0, 0.25);
+  --transparent-black2: rgba(0, 0, 0, 0.16);
+  --transparent-white1: rgba(255, 255, 255, 0.25);
+  --transparent-white2: rgba(255, 255, 255, 0.25);
 }
 
 :root[color-theme="light"] {
@@ -51,7 +55,8 @@
   --surface1: var(--blush-pink);
   --surface2: var(--cream);
   --surface3: var(--blush-purple);
-  --shadow1: var(--transparent-black);
+  --shadow1: var(--transparent-black1);
+  --shadow2: var(--transparent-black2);
 
   --github-color: var(--github-black);
 
@@ -66,14 +71,15 @@
 
 :root[color-theme="dark"] {
   --background: var(--dark);
-  --frontground: var(--white);
-  --middleground: var(--silver);
+  --frontground: var(--d-white);
+  --middleground: var(--d-gray);
   --primary: var(--d-yellow);
   --secondary: var(--d-green);
   --surface1: var(--d-yellow);
   --surface2: var(--black);
   --surface3: var(--blush-purple);
-  --shadow1: var(--transparent-white);
+  --shadow1: var(--transparent-white2);
+  --shadow2: var(--transparent-white2);
 
   --github-color: var(--white);
 
@@ -176,11 +182,11 @@ li {
   background-color: var(--surface3);
 }
 
-.theme-button {
+.mobile-button--icon-container {
   background-color: var(--frontground);
 }
 
-:root[color-theme="dark"] .theme-button {
+:root[color-theme="dark"] .mobile-button--icon-container {
   padding: 4px;
 }
 
@@ -242,7 +248,7 @@ li {
     }
   }
 
-  &:focus .submenu {
+  &[active] .submenu {
     display: block;
   }
 }
@@ -259,14 +265,14 @@ li {
   background-color: var(--secondary);
 }
 
-.mobile-button__mode {
+.mobile-button--icon-container {
   display: grid;
   place-content: center;
   padding: 8px;
   border-radius: 1px;
 }
 
-.mobile-button__mode svg {
+.mobile-button--icon-container svg {
   padding-block-start: 0px;
 }
 
