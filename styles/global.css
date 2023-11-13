@@ -58,6 +58,8 @@
   --shadow1: var(--transparent-black1);
   --shadow2: var(--transparent-black2);
 
+  --extra1: var(--violet);
+
   --github-color: var(--github-black);
 
   .light-hidden {
@@ -80,6 +82,8 @@
   --surface3: var(--blush-purple);
   --shadow1: var(--transparent-white2);
   --shadow2: var(--transparent-white2);
+
+  --extra1: var(--orange);
 
   --github-color: var(--white);
 
@@ -323,7 +327,7 @@ li {
       width: auto;
       height: 1px;
       background-color: var(--frontground);
-      box-shadow: 5px 4px 0px 0px var(--navy-blue);
+      box-shadow: 5px 4px 0px 0px var(--extra1);
     }
   }
 
