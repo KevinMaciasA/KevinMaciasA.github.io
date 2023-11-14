@@ -318,7 +318,7 @@ a {
   border-inline-start: 0;
   border-inline-end: 0;
 
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   opacity: 1;
 
   z-index: 10;
@@ -339,6 +339,10 @@ a {
   .header--right {
     display: flex;
     gap: 16px;
+  }
+
+  &.hide:hover {
+    opacity: 1;
   }
 }
 
@@ -361,4 +365,8 @@ a {
 
 .desktop {
   display: none;
+}
+
+.hide {
+  opacity: 0;
 }

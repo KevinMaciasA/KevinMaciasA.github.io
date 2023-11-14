@@ -49,6 +49,18 @@ document.addEventListener("click", (event) => {
   }
 });
 
+const headerSection = document.getElementById("header");
+
+const observerOptions = { threshold: 0 };
+const observer = new IntersectionObserver((entries) => {
+  const [heroEntry, ...rest] = entries;
+  if (!heroEntry.isIntersecting) headerSection.classList.add("hide");
+  else headerSection.classList.remove("hide");
+}, observerOptions);
+
+const heroSection = document.getElementById("hero");
+observer.observe(heroSection);
+
 function updateLocalStorage(key, value) {
   const storageName = "kevin-website";
   const storageString = localStorage.getItem(storageName);
