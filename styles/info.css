@@ -63,11 +63,15 @@
 
   margin-block-end: 16px;
 
-  z-index: -1;
+  z-index: 2;
 }
 
 .experience h3 {
   text-wrap: wrap;
+}
+
+.hand {
+  pointer-events: none;
 }
 
 .experience .left-hand {

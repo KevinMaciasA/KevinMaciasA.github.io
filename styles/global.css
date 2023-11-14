@@ -143,6 +143,12 @@ li {
   font-size: var(--text-up);
 }
 
+a {
+  text-decoration: none;
+  text-align: center;
+  color: var(--black);
+}
+
 .banner {
   display: grid;
   place-content: center;
@@ -281,18 +287,14 @@ li {
 }
 
 .button__cv {
-  width: 55%;
-  padding: 8px 10px;
-  align-self: center;
+  align-self: flex-end;
+  margin-inline-end: 58px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  text-align: center;
-  text-decoration: none;
+  padding: 6px 10px;
   font-size: var(--text-up);
-  color: var(--black);
   background-color: var(--secondary);
-  line-height: normal;
 
-  border: 1px solid #000;
+  border: 1px solid var(--frontground);
   box-shadow: var(--small-shadow);
 }
 
@@ -315,6 +317,9 @@ li {
   border: 2px solid var(--frontground);
   border-inline-start: 0;
   border-inline-end: 0;
+
+  transition: opacity 0.2s ease-in-out;
+  opacity: 1;
 
   z-index: 10;
 
