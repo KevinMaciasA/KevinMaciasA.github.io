@@ -341,7 +341,7 @@ a {
     gap: 16px;
   }
 
-  &.hide:hover {
+  &[active=""].hide:hover {
     opacity: 1;
   }
 }
@@ -367,6 +367,6 @@ a {
   display: none;
 }
 
-.hide {
+.header[active=""].hide {
   opacity: 0;
 }
