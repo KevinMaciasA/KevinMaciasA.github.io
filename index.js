@@ -1,29 +1,8 @@
-const storageString = localStorage.getItem("kevin-website");
-const storage = JSON.parse(storageString);
-let theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-  ? "dark"
-  : "light";
-
-if (!storage) {
-  const newStorage = {
-    colorTheme: theme,
-  };
-  localStorage.setItem("kevin-website", JSON.stringify(newStorage));
-} else {
-  theme = storage.colorTheme ?? theme;
-}
-document.documentElement.setAttribute("color-theme", theme);
+import { themeHanlder, themeButton } from "./scripts/handleTheme";
+import scrollToSection from "./scripts/utils/scrollToSection";
 
 const resumeButton = document.querySelector(".button__resume");
 const contactButton = document.querySelector(".button__contact");
-
-const themeButton = document.querySelector(".theme-button");
-const themeHanlder = () => {
-  const currentTheme = document.documentElement.getAttribute("color-theme");
-  const swapTheme = currentTheme === "dark" ? "light" : "dark";
-  document.documentElement.setAttribute("color-theme", swapTheme);
-  updateLocalStorage("colorTheme", swapTheme);
-};
 
 const submenuButton = document.querySelector(".mobile-button__hamburger");
 const submenuHanlder = (state) => {
@@ -52,26 +31,33 @@ document.addEventListener("click", (event) => {
 const headerSection = document.getElementById("header");
 
 const observerOptions = { threshold: 0 };
-const observer = new IntersectionObserver((entries) => {
+const iObserver = new IntersectionObserver((entries) => {
   const [heroEntry, ...rest] = entries;
-  if (!heroEntry.isIntersecting) headerSection.classList.add("hide");
-  else headerSection.classList.remove("hide");
+  if (!heroEntry.isIntersecting) {
+    headerSection.setAttribute("active", "");
+  } else {
+    headerSection.removeAttribute("active");
+  }
 }, observerOptions);
 
 const heroSection = document.getElementById("hero");
-observer.observe(heroSection);
+iObserver.observe(heroSection);
 
-function updateLocalStorage(key, value) {
-  const storageName = "kevin-website";
-  const storageString = localStorage.getItem(storageName);
-  const storage = JSON.parse(storageString);
-  let newStorage = { ...storage };
-  newStorage[key] = value;
-  localStorage.setItem(storageName, JSON.stringify(newStorage));
-}
+const mutationObserver = new MutationObserver((mutations) => {
+  for (const mutation of mutations) {
+    if (mutation.attributeName !== "active") return;
 
-function scrollToSection(id) {
-  let section = document.getElementById(id);
+    const value = mutation.target.attributes.getNamedItem("active");
+    if (value) headerSection.classList.add("hide");
+    else headerSection.classList.remove("hide");
+  }
+});
 
-  if (section) window.scrollTo(0, section.offsetTop);
-}
+mutationObserver.observe(headerSection, {
+  attributes: true,
+  attributeFilter: ["active"],
+});
+
+heroSection.addEventListener("touchstart", () => {
+  headerSection.classList.remove("hide");
+});
