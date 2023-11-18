@@ -178,6 +178,11 @@ a {
 
   box-shadow: var(--v-shadow);
   cursor: pointer;
+
+  &:hover {
+    filter: contrast(150%);
+    transform: scale(1.04);
+  }
 }
 
 .primary-button {
@@ -236,6 +241,8 @@ a {
     background-color: var(--surface2);
     border: 2px solid var(--frontground);
 
+    animation: menu 0.5s ease-in-out;
+
     & ul {
       display: flex;
       flex-direction: column;
@@ -259,7 +266,14 @@ a {
   }
 
   &[active] .submenu {
+    opacity: 1;
     display: block;
+  }
+}
+
+.theme-button {
+  &:hover {
+    filter: contrast(140%);
   }
 }
 
@@ -287,10 +301,9 @@ a {
 }
 
 .button__cv {
-  align-self: flex-end;
-  margin-inline-end: 58px;
+  align-self: center;
   font-family: Georgia, "Times New Roman", Times, serif;
-  padding: 6px 10px;
+  padding: 6px 50px;
   font-size: var(--text-up);
   background-color: var(--secondary);
 
@@ -340,10 +353,6 @@ a {
     display: flex;
     gap: 16px;
   }
-
-  &[active=""].hide:hover {
-    opacity: 1;
-  }
 }
 
 .fw-400 {
@@ -369,4 +378,27 @@ a {
 
 .header[active=""].hide {
   opacity: 0;
+
+  .mobile-button {
+    visibility: hidden;
+  }
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (pointer: fine) {
+  .header[active=""].hide:hover {
+    opacity: 1;
+
+    .mobile-button {
+      visibility: visible;
+    }
+  }
 }
