@@ -178,10 +178,11 @@ a {
 
   box-shadow: var(--v-shadow);
   cursor: pointer;
+  transition: transform 0.1s ease-in-out;
 
   &:hover {
     filter: contrast(150%);
-    transform: scale(1.04);
+    transform: scale(1.03);
   }
 }
 
