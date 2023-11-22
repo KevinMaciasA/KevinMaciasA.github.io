@@ -213,6 +213,8 @@ a {
   justify-content: center;
   align-items: center;
 
+  cursor: pointer;
+
   background-color: var(--background);
   border-radius: 3px;
   border: 1px solid var(--frontground);
