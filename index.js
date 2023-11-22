@@ -1,8 +1,5 @@
-import { themeHanlder, themeButton } from "./scripts/handleTheme";
-import scrollToSection from "./scripts/utils/scrollToSection";
-import { test } from "./test";
-
-test();
+import { themeHanlder, themeButton } from "./scripts/handleTheme.js";
+import scrollToSection from "./scripts/utils/scrollToSection.js";
 
 const resumeButton = document.querySelector(".button__resume");
 const contactButton = document.querySelector(".button__contact");

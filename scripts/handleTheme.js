@@ -1,4 +1,4 @@
-import { updateLocalStorage, storageName } from "./utils/localStorage";
+import { updateLocalStorage, storageName } from "./utils/localStorage.js";
 
 const storageString = localStorage.getItem(storageName);
 const storage = JSON.parse(storageString);
