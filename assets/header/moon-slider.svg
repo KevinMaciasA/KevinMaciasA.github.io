@@ -1,0 +1,6 @@
+<svg width="25" height="25" viewBox="0 0 25 25" fill="white" xmlns="http://www.w3.org/2000/svg">
+<g id="dinamic-slider">
+<circle id="slider" cx="12.0645" cy="12.371" r="11.5645" fill="transparent" stroke="black"/>
+<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M12 23.3065C18.0751 23.3065 23 18.3816 23 12.3065C23 6.23133 18.0751 1.30646 12 1.30646C9.59856 1.30646 7.37686 2.07599 5.56802 3.38192C9.20431 3.90031 12.0001 7.02689 12.0001 10.8065C12.0001 14.9486 8.6422 18.3065 4.50006 18.3065C3.85436 18.3065 3.22772 18.2249 2.62988 18.0714C4.56665 21.2127 8.03881 23.3065 12 23.3065Z" fill="inherit"/>
+</g>
+</svg>

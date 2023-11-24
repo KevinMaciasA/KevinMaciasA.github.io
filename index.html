@@ -7,6 +7,7 @@
       content="Hello! My name is Kevin Macias and this es my personal website"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My website</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +19,11 @@
     <link rel="stylesheet" href="./styles/hero.css" />
     <link rel="stylesheet" href="./styles/info.css" />
     <link rel="stylesheet" href="./styles/find-me.css" />
-    <title>My website</title>
+    <link
+      rel="shortcut icon"
+      href="https://i.postimg.cc/ZRGKbVcR/favicon-32x32.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <section id="hero" class="hero">
@@ -69,7 +74,18 @@
         <a class="desktop links" href="#info">about me</a>
         <a class="desktop links" href="#hero">portfolio</a>
         <a class="desktop links" href="#find-me">contact me</a>
-        <button class="desktop" type="button">slider</button>
+        <button title="Toggle theme" class="desktop theme-slider" type="button">
+          <img
+            class="theme-slider--icon moon-icon"
+            src="./assets/header/moon-slider.svg"
+            alt=""
+          />
+          <img
+            class="theme-slider--icon sun-icon"
+            src="./assets/header/sun-slider.svg"
+            alt=""
+          />
+        </button>
         <button class="mobile mobile-button theme-button" type="button">
           <div class="mobile-button--icon-container">
             <svg

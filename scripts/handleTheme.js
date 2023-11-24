@@ -17,6 +17,17 @@ if (!storage) {
 document.documentElement.setAttribute("color-theme", theme);
 
 const themeButton = document.querySelector(".theme-button");
+const themeSlider = document.querySelector(".theme-slider");
+const animateSlider = () => {
+  const moonIcon = themeSlider.querySelector(".moon-icon");
+  const sunIcon = themeSlider.querySelector(".sun-icon");
+  const theme = document.documentElement.getAttribute("color-theme");
+  const sliderIcon = theme === "light" ? moonIcon : sunIcon;
+  sliderIcon.addEventListener("animationend", () => {
+    sliderIcon.classList.remove("animate");
+  });
+  sliderIcon.classList.add("animate");
+};
 const themeHandler = () => {
   const currentTheme = document.documentElement.getAttribute("color-theme");
   const swapTheme = currentTheme === "dark" ? "light" : "dark";
@@ -24,4 +35,4 @@ const themeHandler = () => {
   updateLocalStorage("colorTheme", swapTheme);
 };
 
-export { themeHandler, themeButton };
+export { themeHandler, themeButton, themeSlider, animateSlider };

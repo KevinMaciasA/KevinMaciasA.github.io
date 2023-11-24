@@ -1,4 +1,9 @@
-import { themeHandler, themeButton } from "./scripts/handleTheme.js";
+import {
+  themeHandler,
+  themeButton,
+  themeSlider,
+  animateSlider,
+} from "./scripts/handleTheme.js";
 import scrollToSection from "./scripts/utils/scrollToSection.js";
 
 const resumeButton = document.querySelector(".button__resume");
@@ -20,7 +25,8 @@ document.addEventListener("click", (event) => {
   if (button === resumeButton) scrollToSection("info");
   if (button === contactButton) scrollToSection("find-me");
 
-  if (button === themeButton) themeHandler();
+  if (button === themeSlider) animateSlider();
+  if (button === themeButton || button === themeSlider) themeHandler();
 
   if (button === submenuButton) submenuHanlder();
   else {
