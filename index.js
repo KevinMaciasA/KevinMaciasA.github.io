@@ -10,7 +10,7 @@ const resumeButton = document.querySelector(".button__resume");
 const contactButton = document.querySelector(".button__contact");
 
 const submenuButton = document.querySelector(".mobile-button__hamburger");
-const submenuHanlder = (state) => {
+const submenuHandler = (state) => {
   if (state === undefined) submenuButton.toggleAttribute("active");
   else {
     if (state) submenuButton.setAttribute("active");
@@ -28,9 +28,9 @@ document.addEventListener("click", (event) => {
   if (button === themeSlider) animateSlider();
   if (button === themeButton || button === themeSlider) themeHandler();
 
-  if (button === submenuButton) submenuHanlder();
+  if (button === submenuButton) submenuHandler();
   else {
-    submenuHanlder(false);
+    submenuHandler(false);
   }
 });
 
@@ -82,4 +82,21 @@ const mutationObserver = new MutationObserver((mutations) => {
 mutationObserver.observe(headerSection, {
   attributes: true,
   attributeFilter: ["active"],
+});
+
+document.addEventListener("click", (event) => {
+  const isActive = headerSection.hasAttribute("active");
+
+  if (!isActive) return;
+
+  const target = event.target;
+  const header = target.closest(".header");
+
+  if (header) {
+    headerSection.classList.remove("hide");
+    headerSection.classList.add("peek");
+  } else {
+    headerSection.classList.remove("peek");
+    headerSection.classList.add("hide");
+  }
 });

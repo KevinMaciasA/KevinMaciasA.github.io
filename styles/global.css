@@ -461,6 +461,14 @@ a {
   }
 }
 
+.header[active=""].peek {
+  opacity: 1;
+
+  .mobile-button {
+    visibility: visible;
+  }
+}
+
 @keyframes menu {
   0% {
     opacity: 0;
