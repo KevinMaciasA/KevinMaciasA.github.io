@@ -51,7 +51,8 @@
 }
 
 .experience {
-  margin-block-start: -6px;
+  max-width: 550px;
+  margin: -6px auto 16px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -60,8 +61,6 @@
 
   background-color: var(--background);
   border: 2px solid var(--frontground);
-
-  margin-block-end: 16px;
 
   z-index: 2;
 }
