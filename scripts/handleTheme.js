@@ -17,11 +17,11 @@ if (!storage) {
 document.documentElement.setAttribute("color-theme", theme);
 
 const themeButton = document.querySelector(".theme-button");
-const themeHanlder = () => {
+const themeHandler = () => {
   const currentTheme = document.documentElement.getAttribute("color-theme");
   const swapTheme = currentTheme === "dark" ? "light" : "dark";
   document.documentElement.setAttribute("color-theme", swapTheme);
   updateLocalStorage("colorTheme", swapTheme);
 };
 
-export { themeHanlder, themeButton };
+export { themeHandler, themeButton };
