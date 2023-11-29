@@ -20,14 +20,31 @@
   width: 320px;
   min-height: 400px;
 
-  padding: 22px 26px;
+  padding-block-end: 22px;
 
   border: 2px solid var(--frontground);
   background-color: var(--background);
 
-  h3 {
-    text-align: center;
+  box-shadow: var(--p-card-shadow);
+
+  & > * {
+    padding: 0 26px;
   }
+}
+
+.project-card .name-container {
+  padding: 16px 26px 4px;
+}
+
+.project-card .picture-container {
+  padding: 1px 0;
+  border-block-start: 2px solid var(--frontground);
+  border-block-end: 2px solid var(--frontground);
+  background-color: var(--surface2);
+}
+
+.picture-container img {
+  aspect-ratio: 16 / 9;
 }
 
 .stack-container .title {

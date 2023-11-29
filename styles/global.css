@@ -95,7 +95,7 @@
   --surface2: var(--black);
   --surface3: var(--blush-purple);
   --shadow1: var(--transparent-white2);
-  --shadow2: var(--transparent-white2);
+  --shadow2: var(--frontground);
 
   --extra1: var(--orange);
 
@@ -131,6 +131,7 @@
   --sm-classic-shadow: 0px 1px 0px 1px var(--shadow1);
   --small-shadow: 0px 1px 0px 1px var(--frontground);
   --box-shadow: 0px 3px 0px 1px var(--frontground);
+  --p-card-shadow: 0px 4px 0px 2px var(--shadow2);
 }
 
 body {
