@@ -65,8 +65,17 @@
   z-index: 2;
 }
 
-.experience h3 {
+.experience h2 {
+  font-size: 2rem;
+}
+
+.experience p:not(li > p) {
+  padding: 0 8px;
   text-wrap: wrap;
+}
+
+.experience .button__cv {
+  margin-block-start: 2px;
 }
 
 .hand {
