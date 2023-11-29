@@ -1,0 +1,82 @@
+.portfolio {
+  padding-block-end: 3.52vh;
+}
+
+.portfolio .banner {
+  background-color: var(--surface3);
+  margin-block-end: 3.52vh;
+}
+
+.project-container {
+  display: grid;
+  place-content: center;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 320px;
+  min-height: 400px;
+
+  padding: 22px 26px;
+
+  border: 2px solid var(--frontground);
+  background-color: var(--background);
+
+  h3 {
+    text-align: center;
+  }
+}
+
+.stack-container .title {
+  margin-block-end: 6px;
+  font-weight: bold;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-container > * {
+  align-self: flex-start;
+}
+
+.skill {
+  flex: 0;
+  display: flex;
+  align-items: center;
+  margin: 0 0 6px 6px;
+  padding: 4px 10px;
+  gap: 6px;
+  border-radius: 0;
+
+  border: 1px solid var(--frontground);
+}
+
+.skill__ts {
+  box-shadow: -5px 5px 0px 1px var(--ts-blue);
+}
+
+.skill__react {
+  box-shadow: -5px 5px 0px 1px var(--react-blue);
+}
+
+.skill__html {
+  box-shadow: -5px 5px 0px 1px var(--html-orange);
+
+  & > p {
+    text-transform: uppercase;
+  }
+}
+
+.skill__css {
+  box-shadow: -5px 5px 0px 1px var(--css-blue);
+
+  & > p {
+    text-transform: uppercase;
+  }
+}

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/hero.css" />
     <link rel="stylesheet" href="./styles/info.css" />
+    <link rel="stylesheet" href="./styles/portfolio.css" />
     <link rel="stylesheet" href="./styles/find-me.css" />
     <link
       rel="shortcut icon"
@@ -72,7 +73,7 @@
       </a>
       <div class="header--right">
         <a class="desktop links" href="#info">about me</a>
-        <a class="desktop links" href="#hero">portfolio</a>
+        <a class="desktop links" href="#portfolio">portfolio</a>
         <a class="desktop links" href="#find-me">contact me</a>
         <button title="Toggle theme" class="desktop theme-slider" type="button">
           <img
@@ -170,7 +171,7 @@
               </li>
               <li>
                 <a
-                  href="#hero"
+                  href="#portfolio"
                   class="mobile-button submenu--button submenu--button__github"
                 >
                   <img src="./assets/hero/github.svg" alt="Github logo" />
@@ -266,6 +267,36 @@
             fill="inherit"
           />
         </svg>
+      </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+      <div class="banner"><h2>My portfolio</h2></div>
+      <div class="project-container">
+        <article class="project-card">
+          <h3>Tetris clone</h3>
+          <div class="picture-container"></div>
+          <!-- TODO: remove React skill and add html and css -->
+          <div class="info-container">
+            <p>Web-based Tetris built from scratch.</p>
+          </div>
+          <div class="stack-container">
+            <p class="title">Stack</p>
+            <div class="skill-container">
+              <div class="skill skill__ts">
+                <div class="bullet bullet__ts"></div>
+                <p class="skill--content">Typescript</p>
+              </div>
+              <div class="skill skill__html">
+                <div class="bullet bullet__html"></div>
+                <p class="skill--content">html5</p>
+              </div>
+              <div class="skill skill__css">
+                <div class="bullet bullet__css"></div>
+                <p class="skill--content">css</p>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
     <section id="find-me" class="find-me">
