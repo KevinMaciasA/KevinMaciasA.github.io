@@ -100,6 +100,14 @@
   background-color: var(--react-blue);
 }
 
+.bullet__html {
+  background-color: var(--html-orange);
+}
+
+.bullet__css {
+  background-color: var(--css-blue);
+}
+
 .button__card {
   display: flex;
   align-items: center;

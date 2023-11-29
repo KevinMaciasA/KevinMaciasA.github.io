@@ -6,7 +6,7 @@
 
   /* Text variables */
   --h1: 2.4rem;
-  --h2: 2.4rem;
+  --h2: 2.2rem;
   --h3: 2rem;
   --h4: 2rem;
   --text: 1.6rem;
@@ -39,6 +39,8 @@
   --ts-blue: #3178c6;
   --linkedin-blue: #0a66c2;
   --react-blue: #61dafb;
+  --html-orange: #e34c26;
+  --css-blue: #264de4;
 
   --transparent-black1: rgba(0, 0, 0, 0.25);
   --transparent-black2: rgba(0, 0, 0, 0.16);
@@ -183,6 +185,7 @@ a {
   border-inline-end: 0;
 
   & h2 {
+    font-size: var(--h1);
     text-align: center;
     font-weight: 500;
     color: black;
@@ -364,17 +367,17 @@ a {
 
   z-index: 10;
 
-  .logo {
+  .logo--name {
     font-size: var(--h2);
     font-weight: 500;
     line-height: normal;
+  }
 
-    .logo--line {
-      width: auto;
-      height: 1px;
-      background-color: var(--frontground);
-      box-shadow: 5px 4px 0px 0px var(--extra1);
-    }
+  .logo--line {
+    width: auto;
+    height: 1px;
+    background-color: var(--frontground);
+    box-shadow: 5px 4px 0px 0px var(--extra1);
   }
 
   .header--right {
